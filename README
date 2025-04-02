@@ -7,6 +7,15 @@ javascript:(function(){var s=document.createElement('script');s.src='https://unp
 For those trying to get this working on the AdventureQuestWorld Game: support is not quite there with ruffle although this second script will load the game on the webpage for you.
 It will be sized funny, so use their size options on the page to resize it. This lets you log in and attempt to load into a server but fails there ruffle can't support the way it's handled (yet)
 It might one day so I'll still post the script to use. I assume you got here via the Reddit comment I made on Adventure Quest which is why there is no explanation here.
+Do note the below scripts are intended for specific webpages only not like the above script.
+
+AdventureQuestWorlds Script:
 
 
 javascript:(function(){var s=document.createElement('script');s.src='https://unpkg.com/@ruffle-rs/ruffle';document.head.appendChild(s);var o=document.getElementsByTagName('object');for(var i=o.length-1;i>=0;i--){var obj=o[i];if(obj.type==='application/x-shockwave-flash'){var clonedObj=obj.cloneNode(true);var parent=obj.parentNode;var nextSibling=obj.nextSibling;parent.removeChild(obj);console.log('Removed original Flash <object> element:',obj);parent.insertBefore(clonedObj,nextSibling);console.log('Inserted cloned Flash <object> element:',clonedObj);}}var flashContentDiv=document.getElementById('flashContent');if(flashContentDiv){flashContentDiv.innerHTML='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="u35941" codebase="https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="100%" height="100%"><param name="movie" value="gamefiles/Loader3.swf?ver=a" /><param name="LOOP" value="false" /><param name="SCALE" value="exactfit" /><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="true" /><param name="menu" value="false" /><param name="wmode" value="window" /><param name="FlashVars" value="&sLang=en&isweb=true" /><embed id="gameSWF" src="gamefiles/Loader3.swf?ver=a" width="100%" height="100%" loop="false" pluginspage="https://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" scale="exactfit" allowscriptaccess="always" allowFullScreen="true" menu="false" flashvars="&sLang=en&isweb=true"></embed></object>';console.log('Replaced innerHTML of #flashContent');}else{console.log('Div with ID "flashContent" not found.');}})()
+
+
+EpicDuel Script: 
+
+Failed for now...sorry
+
