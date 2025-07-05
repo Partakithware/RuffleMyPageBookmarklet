@@ -1,3 +1,21 @@
+Use flash via Ruffle in your web-browser:
+
+Instructions For: Edge, Firefox, Chrome, etc...
+
+1. Copy Script 1 to clipboard.
+
+2. Create new Bookmark or in some browsers cases you must ctrl+D a page save one then edit it.
+
+3. Replace the URL portion of the bookmark with the script and save it.
+
+4. Load desired page that contains a SWF game/embedded file, for example : https://aq.battleon.com/game/web?launchtype=medium
+
+5. Once the page has loaded, press the new bookmark you just made and the game should load! 
+
+6. Congrats you can now play flash games via your web-browser once again.
+
+
+
 Script 1 Works on Games: AdventureQuest, Dragonfable, Mechquest, Oversoul, and most other SWF based Games
 
 javascript:(function(){var s=document.createElement('script');s.src='https://unpkg.com/@ruffle-rs/ruffle';document.head.appendChild(s);var o=document.getElementsByTagName('object');for(var i=o.length-1;i>=0;i--){var obj=o[i];if(obj.type==='application/x-shockwave-flash'){var clonedObj=obj.cloneNode(true);var parent=obj.parentNode;var nextSibling=obj.nextSibling;parent.removeChild(obj);console.log('Removed original Flash <object> element:',obj);parent.insertBefore(clonedObj,nextSibling);console.log('Inserted cloned Flash <object> element:',clonedObj);}}})();
